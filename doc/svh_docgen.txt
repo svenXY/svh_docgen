@@ -1,0 +1,46 @@
+*svh_docgen.txt*                                      Last change: 2025 Mai 08
+
+==============================================================================
+Table of Contents                               *svh_docgen-table-of-contents*
+
+Installation ....................................... |svh_docgen-installation|
+Usage ..................................................... |svh_docgen-usage|
+
+==============================================================================
+INTRODUCTION                                         *svh_docgen-introduction*
+
+
+`svh_docgen` is a very thin wrapper around `ibhagwan/ts-vimdoc.nvim`.
+
+
+------------------------------------------------------------------------------
+INSTALLATION                                         *svh_docgen-installation*
+
+
+with `lazy.nvim`:
+
+>lua
+    {
+      "svenXY/svh_docgen",
+      dependencies = {
+        "ibhagwan/ts-vimdoc.nvim"
+      },
+    }
+<
+
+------------------------------------------------------------------------------
+USAGE                                                       *svh_docgen-usage*
+
+
+When a file named _README.md_ or _Readme.md_ is open in a buffer, the command
+`SvhDocgen` is registered.
+
+Call it to create the helpfile. It will try to determine the project from the
+directory of the Readme file, but will also interactively ask for it to be
+changed.
+
+The helpfile will then be created in a doc/ subfolder, which will also be
+created if not already existing
+
+
+vim:tw=78:ts=8:ft=help:norl:
